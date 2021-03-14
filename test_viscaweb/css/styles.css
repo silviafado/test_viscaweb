@@ -1,0 +1,374 @@
+@import "./switch.css";
+
+/* Body background */
+body {
+  background-image: url('../assets/BackgroundFigure.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px;
+}
+
+/* Header navbar styling */
+.header {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;   
+}
+
+.nested_navbar {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#navbar {
+  display: grid;
+  grid-template-rows: 63px;
+  grid-template-columns: repeat(6, 1fr);  
+  grid-gap: 20px;
+  grid-template-areas:
+  "hd hd hd hd hd hd";
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  font-weight: 550;
+  font-style: normal;
+}
+
+/* Title styling */
+.title {
+  grid-area: ti;
+  display: grid;
+  grid-template-rows: 52px;
+  grid-template-columns: auto auto auto auto 57px;  
+  grid-template-areas:
+  "ti ti ti ti ti";
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: left; 
+  padding: 30px; 
+  padding-bottom: 0px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Canada flag .svg size */
+#canada_flag {
+  width: 44px;
+}
+
+/* Title elements alignment */
+#canadaflag_box, #switch, #change_view {
+  justify-content: flex-end;
+}
+
+.content_box {
+  padding: 26px 20px;
+}
+
+#sort_alphabet, #change_view {
+  font-family: Source Sans Pro;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0px;
+  color: #484848;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+#sort_alphabet, #title {
+  justify-content: left; 
+  padding-left: 12px;
+}
+
+/* Cards styling */
+.card_box {
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: 56px 133px 76px 100px auto 143px;
+  padding: 12px 21px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.card_box:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transform: scale(1.01); 
+}
+
+.card_grid {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* Card elements styling */
+.bonus {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 38px;
+}
+
+.star {
+  width: 55px;
+}
+
+#marker {
+  width: 72px;
+}
+
+.marker {
+  display: flex;
+  justify-content: center;
+}
+
+#view_all {
+  height: 34px;
+}
+
+/* PLAY NOW button styling */
+button {
+  display: grid;
+  grid-area: bu;
+  grid-template-columns: 123px 20px; 
+  grid-template-areas:
+  "bu bu"; 
+  width: 143px;
+  height: 36px;
+  background-color: #F44337;
+  border-radius: 4px;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  word-spacing: -0.25px;
+  color: #FFFFFF;
+  align-items: center;
+  cursor: pointer;
+}
+
+#arrow {
+  height: 10px;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#play {
+  display: flex;
+  justify-content: flex-start; 
+  margin-left: 44px;
+}
+
+/* Text styling */
+h2 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  letter-spacing: -0.92px;
+  color: #525252;
+}
+
+h3 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration-line: underline;
+  color: #3A3A3A;
+}
+
+h4 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  text-align: right;
+  letter-spacing: 0.32px;
+  color: #3F48FC;
+}
+
+a { text-decoration: none; }
+
+/* Responsive design for mobile */
+@media only screen and (max-width: 600px){
+  /* Showing navbar when clicking on the header's logo */
+  #navbar {
+    display: grid;
+    grid-template-rows: repeat(6, 30px);
+    grid-template-columns: 100px;  
+    grid-template-areas:
+    "hd"
+    "hd"
+    "hd"
+    "hd"
+    "hd"
+    "hd";
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 14px;
+    font-weight: 550;
+    font-style: normal;
+    background-color: #484848;
+    grid-gap: 5px;
+    display: none;
+  }
+
+  .header {
+    justify-content: left;
+    height: 60px;
+  }
+
+  .nested_navbar {
+    display: grid;
+    grid-template-columns: 100px;
+  }
+
+  .show_nav #navbar {
+    display: block;
+  }
+
+  .box {
+    justify-content: center;
+  }
+
+  /* Customised font-size due nav width */
+  #power_rankings {
+    font-size: 12px;
+  }
+
+  /* Change title elements' layout for mobile */
+  #title {
+    font-weight: bold;
+    font-size: 14px;
+    order: 2;
+  }
+
+  .title {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 75% 25%;
+    grid-template-areas: 
+    "ti ti"
+    "ti ti";
+  }
+
+  #sort_alphabet {
+    order: 3;
+    visibility: hidden;
+  }
+
+  #change_view {
+    order: 4;
+    visibility: hidden;
+  }
+
+  #canadaflag_box {
+    order: 1;
+  }
+
+  /* Customised shorter text for mobile */
+  #change_view:after {
+    visibility: visible;
+    content: "Sort Alphabetically";
+    justify-content: right;
+    font-size: 13px;
+  }
+
+  /* Elements not displayed on mobile */
+  #marker, #switch, .play, #stars1, #stars2, #stars3, #stars4, #stars5 {
+    display: none;
+  }
+
+  /* Canada flag .svg adjusted size for mobile */
+  #canada_flag {
+    width: 18px;
+  }
+
+  .content_box {
+    padding: 16px;
+  }
+
+  .button {
+    width: 39px;
+    height: 56px;
+    color: #FFFFFF;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* Customised card layout for mobile, measurements are approximate. I prioritised handing-in today as
+  already had developed with accuracy the desktop layouts in both views */
+  .card_box {
+    border-radius: 0px 8px 8px 0px;
+    height: 56px;
+    width: auto;
+    padding: 0px 0px 0px 17px;
+    display: grid;
+    grid-template-rows: 56px;
+    grid-template-columns: 10% 26% 14% 39% 11%;
+    grid-template-rows: 100%;
+  }
+
+  #review1, #review2, #review3, #review4, #review5 {
+    visibility: hidden;
+    position: relative;
+  }
+
+  /* Customised shorter text for mobile */
+  #review1:after, #review2:after, #review3:after, #review4:after, #review5:after {
+    visibility: visible;
+    content: "Review";
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #484848;
+  }
+
+  .bonus {
+    visibility: hidden;
+    position: relative;
+  }
+
+  .bonus:after {
+    visibility: visible;
+    /* All bonus texts are the same as it would be same CSS rule for all cases */
+    content: "BONUS $ 200";
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: -0.23px;
+    color: #2A42ED;
+  }
+
+  /* Customised button arrow for mobile */
+  .arrow {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+}  
